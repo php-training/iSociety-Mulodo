@@ -182,7 +182,7 @@
 					$entry = Model_Login_Token ::find('all', array (
 											'where' => array (//search the database for token 
 											array ('token', $token),
-											array ('due_date', '>', date ('Y-m-d h:i:s', time())),
+											array ('due_date', '>=', date ('Y-m-d h:i:s', time())),
 											)
 											));
 					
