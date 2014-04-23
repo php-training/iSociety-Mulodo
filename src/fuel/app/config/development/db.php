@@ -6,7 +6,7 @@
 return array(
 	'default' => array(
 		'connection'  => array(
-			'dsn'        => 'mysql:host=127.0.0.1;dbname=mydb',
+			'dsn'        => 'mysql:host=127.0.0.1;dbname=twitter',
 			'username'   => 'root',
 			'password'   => '',
 		),

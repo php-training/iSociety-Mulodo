@@ -70,7 +70,7 @@
 						
 						foreach ($entry as $user){ //run 1 time since there is only one user. 
 							$dbtoken   = new Model_Login_Token();	//if no error is found, insert token into login_token table
-							$dbtoken -> iduser   = $user->iduser; //id user
+							$dbtoken -> iduser   = $user -> id; //id user
 							$dbtoken -> token    = $token;
 							$dbtoken -> due_date = date('Y-m-d h:i:s' ,time() + $this->EXPIRE_PERIOD); //2 days
 							$dbtoken -> save();
@@ -139,9 +139,10 @@
 									
 								$newuser             = new Model_User();
 								//sync data
-								$newuser -> email    = $email;
-								$newuser -> password = $pwd;
-								//insert into database
+								$newuser -> email    = 	$email;
+								$newuser -> password = 	$pwd;
+								$newuser -> created_at = time();
+								//insert into databaseateime
 								$newuser -> save();
 									
 							}
